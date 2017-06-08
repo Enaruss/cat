@@ -1,0 +1,32 @@
+allprojects  {
+  apply plugin: 'maven'
+
+  group = 'com.dianping.cat'
+version = '1.4.0'
+}
+
+subprojects {
+  apply plugin: 'java'
+  sourceCompatibility = 1.5
+  targetCompatibility = 1.5
+  tasks.withType(JavaCompile) {
+  	options.encoding = 'utf-8'
+  }
+
+  task packageSources(type: Jar) {
+classifier = 'sources'
+from sourceSets.main.allSource
+
+}
+artifacts.archives packageSources
+  repositories {
+    mavenLocal()
+    
+    maven { url "http://repo1.maven.org/maven2" }
+    maven { url "http://unidal.org/nexus/content/repositories/releases/" }
+  }
+
+  
+  
+  
+}

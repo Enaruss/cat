@@ -1,0 +1,12 @@
+
+description = 'cat-hadoop'
+dependencies {
+    compile(group: 'org.apache.hadoop', name: 'hadoop-client', version:'2.4.1') {
+exclude(module: 'jasper-runtime')
+exclude(module: 'jasper-compiler')
+exclude(module: 'jetty')
+exclude(module: 'jetty-util')
+    }
+  compile project(':cat-core')
+    testCompile group: 'junit', name: 'junit', version:'4.8.1'
+}

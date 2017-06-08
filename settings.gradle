@@ -1,0 +1,14 @@
+rootProject.name = 'parent'
+include ':cat-client'
+include ':cat-core'
+include ':cat-consumer'
+include ':cat-hadoop'
+include ':cat-home'
+include ':cat-maven-plugin'
+
+project(':cat-client').projectDir = "$rootDir/cat-client" as File
+project(':cat-core').projectDir = "$rootDir/cat-core" as File
+project(':cat-consumer').projectDir = "$rootDir/cat-consumer" as File
+project(':cat-hadoop').projectDir = "$rootDir/cat-hadoop" as File
+project(':cat-home').projectDir = "$rootDir/cat-home" as File
+project(':cat-maven-plugin').projectDir = "$rootDir/cat-maven-plugin" as File

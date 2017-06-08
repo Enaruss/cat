@@ -10,8 +10,10 @@ public class SessionManager implements ISessionManager<Session, Token, Credentia
 		String password = credential.getPassword();
 
 		if (account != null && password != null) {
+			if (account.equals("admin") && password.equals("admin007"))
+			{return new Token(account, account);}
+			else return null;
 			// default no authenticate
-			return new Token(account, account);
 		} else {
 			return null;
 		}

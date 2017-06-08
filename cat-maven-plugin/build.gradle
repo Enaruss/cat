@@ -1,0 +1,8 @@
+
+description = 'cat-maven-plugin'
+dependencies {
+    compile group: 'org.apache.maven', name: 'maven-plugin-api', version:'3.0.3'
+    compile group: 'org.unidal.maven.plugins', name: 'common', version:'2.4.2'
+    compile group: 'org.unidal.framework', name: 'foundation-service', version:'2.5.0'
+    runtime group: 'mysql', name: 'mysql-connector-java', version:'5.1.20'
+}
